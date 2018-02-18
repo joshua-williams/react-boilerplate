@@ -1,3 +1,11 @@
+# Compiled assets
+dist/assets
+
+# IDE settings
+.idea
+.settings
+react-boilerplate.iml
+
 # Logs
 logs
 *.log
