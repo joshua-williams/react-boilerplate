@@ -6,11 +6,12 @@ module.exports = {
 
     output: {
         filename: '[name].bundle.js',
-        path: path.join(__dirname, 'dist/assets')
+        path: path.join(__dirname, 'dist/assets'),
+        publicPath:  '/dist/assets'
     },
 
     devServer: {
-        port: 8888,
+        port: 8000,
         inline: true,
         contentBase: path.join(__dirname, 'dist')
     },
@@ -19,7 +20,7 @@ module.exports = {
         rules: [{
             test: /\.jsx?$/,
             include: path.resolve(__dirname, 'src'),
-            exclude: [/(node_modules)/],
+            exclude: /node_modules/,
             loader: 'babel-loader',
             options: {presets: ['env', 'react']}
         }]
